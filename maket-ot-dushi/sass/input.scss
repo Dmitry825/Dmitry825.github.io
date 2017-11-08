@@ -1,0 +1,260 @@
+$font: Conv_Code Pro Bold;
+
+html, body {
+	background-image: url('/images/bg.jpg');
+	color: white;
+}
+a {
+	color: white;
+	&:hover {
+		color: #00b8f5;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:active {
+		color: white;
+	}
+}
+label {
+	color: white;
+	font-weight: normal;
+}
+.login {
+	line-height: 60px;
+}
+p.title {
+	padding: 25px 0;
+	font-family: $font;
+	font-size: 24px;
+	color: #979696;
+}
+
+.category {
+	&-img {
+	box-shadow: -8px 7px 28px rgba(0, 0, 0, 0.25), -3px 3px 10px rgba(0, 0, 0, 0.55);
+	}
+	& .item {
+		width: 210px;
+		margin: 0 auto;
+		text-align: center;
+		& a {
+			cursor: pointer;
+		}
+		& a:hover {
+			color: white;
+	}
+}
+}
+
+a:hover {
+	& p {
+		color: white;
+	}
+}
+
+.bottom-gradient {
+	position: absolute;
+	bottom: 0;
+	height: 130px;
+	width: 100%;
+	background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+}
+
+/*mockup-panel*/
+.mockup-panel-top-bg {
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	& .row > span {
+		margin: 20px 0;
+	}
+}
+.previews-container {
+	height: 152px;
+}
+.mockup-panel-bottom-bg {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 110px;
+	background: rgba(0,0,0,0.7);
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+#tip {
+	display: inline-block;
+	font-family: $font;
+	font-size: 23px;
+	color: white;
+	line-height: 152px;
+	margin-bottom: 0px;
+}
+.upload {
+	width: 110px;
+	white-space: normal;
+	padding: 0;
+	background: linear-gradient(to top, #757779, #919394);
+	border: none;
+	margin-top: 30px;
+	float: right;
+	
+	& span {
+	display: inline-block;
+	font-family: $font;
+	font-size: 18px;
+	padding: 23px 0;
+	border: none;
+	color: white;
+	text-shadow: none;
+	}
+	&:hover {
+		background: linear-gradient(to top, #416fb8, #5b9ad0);
+	}
+}
+#previews {
+	white-space: nowrap;
+}
+.mockup-panel-main {
+	margin-top: 20px;
+	& .container {
+		position: relative;
+	}
+	& .button-group {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	& .btn-submit {
+		display: block;
+	}
+	& .btn-submit:first-of-type {
+		margin-bottom: 10px;
+	}
+	& .checkout-form {
+		margin-top: 40px;
+		font-weight: normal;
+		& .btn-submit {
+			margin-top: 25px;
+			width: 330px;
+		}
+	}
+	& .table-darkStyle {
+		margin-top: 20px;
+		border-color: #0d5777;
+		& > tbody > tr > td {
+			border-color: #0d5777;
+		}
+		& > thead > tr > th {
+			border-color: #0d5777;	
+			background: rgba(0,0,0,0.7);
+		}
+	}
+}
+.mockup-panel-photogrid {
+	height: auto;
+	background: white;
+	margin: 0px auto;
+	padding: 3px;
+	display: inline-block;
+	&-ratio {
+		padding-top: 50%; 
+	}
+	& .item {
+		width: 135px;
+		height: 135px;
+		background: #dcdcdc;
+		margin: 3px;
+		float: left;
+	}
+	& .item:nth-child(4) {
+		clear: left;
+	}
+}
+.btn-submit {
+		background: linear-gradient(to top, #416eb8, #5b9bd1);
+		border-radius: 25px;
+		color: white;
+}
+.popup {
+	font-family: 'Myriad Pro';
+	&_overlay {
+		position: fixed;
+		background-color: rgba(0,0,0,0.7);
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+
+	}
+	&_inner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 101;
+		width: 390px;
+		background: #2e313b;
+		border: 1px solid #111114;
+		padding: 30px;
+	}
+	&_title {
+		color: white;
+		font-size: 14px;
+		font-family: 'Myriad Pro';
+		margin-bottom: 15px;
+	} 
+	&-btn {
+		width: 48%;
+		background: linear-gradient(to top, #373f4a, #495362);
+		color: white;
+		line-height: 30px;
+		border-radius: 6px;
+		box-shadow: 2px 2px rgba(0,0,0,0.2)
+	}
+	& .btn-submit {
+		width: 100%;
+		background: linear-gradient(to top, #416eb8, #5b9bd1);
+		border-radius: 25px;
+		line-height: 30px;
+		color: white;
+	}
+	&-btn:first-of-type {
+		margin-right: 10px;
+	}
+	& .active-btn {
+		background: linear-gradient(to top, #6c9c55, #88b272);
+	}
+	& .form-control {
+		background: #282d34;
+		margin: 15px 0;
+		height: 45px;
+	}	
+}
+.darkStyle {
+	background: #16181c;
+	border: none;
+	box-shadow: 0px 1px rgba(255,255,255,0.15), inset 0px 4px 15px rgba(0,0,0, 0.15);
+	border-radius: 6px;
+	color: white;
+}
+.input-icon {
+    position: absolute;
+    right: 15px;
+    z-index: 2;
+    pointer-events: none;
+    color: #979696;
+    line-height: 45px;
+}
+.form-icon {
+    position: relative;
+    & input {
+    	padding-left: 15px;	
+    }
+}
+
+.clearfix:before {
+	content: "";
+	display: table;
+	clear: both;
+} 
+

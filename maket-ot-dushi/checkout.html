@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- styles -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+		<link rel="stylesheet" href="css/dropzone.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />
+		<link rel="stylesheet" href="css/jquery-ui.structure.css" type="text/css" />
+		<link rel="stylesheet" href="css/jquery-ui.theme.css" type="text/css" />				
+
+		<!-- scripts -->
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>		
+		<script src="js/bootstrap.min.js"></script>		
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/dropzone.js"></script>	
+		<script src="js/jcanvas.js"></script>
+
+
+	</head>
+	<body>
+
+	<div class="popup_overlay" style="display:none;"></div>
+	<div class="popup" id="login" style="display:none;">
+		<div class="popup_wrapper">
+			<div class="popup_inner">
+				<p class="popup_title">ЧТОБЫ СОХРАНИТЬ МАКЕТ, ВАМ НУЖНО ЗАРЕГИСТРИРОВАТЬСЯ или АВТОРИЗОВАТЬСЯ</p>
+				<span class="btn popup-btn active-btn" id="signUp">Зарегистрироваться</span><span class="btn popup-btn" id="signIn">Авторизоваться</span>
+				<div class="form-group form-icon">
+					<input type="text" class="form-control" placeholder="Введите вашу почту">
+					<i class="glyphicon glyphicon-user input-icon" aria-hidden="true"></i>
+				</div>
+				<div class="form-group form-icon">
+					<input type="password" class="form-control" placeholder="Придумайте пароль">
+					<i class="glyphicon glyphicon-asterisk input-icon" aria-hidden="true"></i>
+				</div>
+				<span class="btn btn-submit">Зарегистрироваться</span>
+			</div>
+		</div>
+	</div>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="login" href="#">ABorkin@ya.ru</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="main">
+		
+			<div class="mockup-panel-top-bg">
+				<div class="container">
+					<!-- <p id="tip" class="col-md-10 text-center">Чтобы добавить фото, просто нажмите эту кнопку ->>></p> -->
+					<div class="row">
+					<span class="col-md-2"><a href="savedmockups.html">Мои заказы (1)</a></span>
+					<span class="col-md-10"><a href="savedmockups.html">Мои незаконченные макеты (0)</a></span>
+					</div>
+
+				</div>
+			</div>
+			<div class="mockup-panel-main">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">Заказ номер: 345. Статус: оформление заказа</div>
+						<form class="col-md-12 form-horizontal text-right checkout-form">
+							<div class="col-md-4" style="margin-bottom: 30px;">Заполните все поля для доставки.</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label class="col-md-4 label-control" for="inputName">ФИО получаетеля:</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control darkStyle" id="inputName">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 label-control" for="inputName">Населенный пункт:</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control darkStyle" id="inputName">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-4 label-control" for="inputName">Улица, дом, квартира:</label>
+								<div class="col-md-6">
+									<input type="text" class="form-control darkStyle" id="inputName">
+								</div>
+							</div>	
+							<div class="form-group">
+								<label class="col-md-4 label-control" for="inputName">Индекс:</label>
+								<div class="col-md-2">
+									<input type="text" class="form-control darkStyle" id="inputName">
+								</div>
+							</div>	
+							<div class="form-group">
+								<label class="col-md-4 label-control" for="inputName">Телефон:</label>
+								<div class="col-md-3">
+									<input type="text" class="form-control darkStyle" id="inputName">
+								</div>
+							</div>	
+							<div class="col-md-offset-4">
+								<div class="btn btn-submit">Сохранить данные и перейти к оплате</div>
+							</div>														
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="bottom-gradient"></div>
+
+
+	</body>
+</html>

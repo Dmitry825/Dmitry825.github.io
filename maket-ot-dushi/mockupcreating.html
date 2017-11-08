@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- styles -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+		<link rel="stylesheet" href="css/dropzone.css" type="text/css" />
+
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />
+		<link rel="stylesheet" href="css/jquery-ui.structure.css" type="text/css" />
+		<link rel="stylesheet" href="css/jquery-ui.theme.css" type="text/css" />				
+
+		<!-- scripts -->
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>		
+		<script src="js/bootstrap.min.js"></script>		
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/dropzone.js"></script>	
+		<script src="js/jcanvas.js"></script>
+
+		
+<script>
+
+<!-- 3 -->
+/*Dropzone.options.myDropzone = {
+    init: function() {
+        thisDropzone = this;
+        <!-- 4 -->
+        $.get('upload.php', function(data) {
+ 
+            <!-- 5 -->
+            $.each(data, function(key,value){
+                 
+                var mockFile = { name: value.name, size: value.size };
+                 
+                thisDropzone.options.addedfile.call(thisDropzone, mockFile);
+ 
+                thisDropzone.options.thumbnail.call(thisDropzone, mockFile, "uploads/"+value.name);
+                 
+            });
+             
+        });
+    }
+};*/
+Dropzone.options.myAwesomeDropzone = {
+	createImageThumbnails: false,
+  init: function() {
+    this.on("addedfile", function(file) { alert("Added file."); });
+  }
+};
+</script>
+
+	</head>
+	<body>
+
+	<div class="popup_overlay" style="display:none;"></div>
+	<div class="popup" id="login" style="display:none;">
+		<div class="popup_wrapper">
+			<div class="popup_inner">
+				<p class="popup_title">ЧТОБЫ СОХРАНИТЬ МАКЕТ, ВАМ НУЖНО ЗАРЕГИСТРИРОВАТЬСЯ или АВТОРИЗОВАТЬСЯ</p>
+				<span class="btn popup-btn active-btn" id="signUp">Зарегистрироваться</span><span class="btn popup-btn" id="signIn">Авторизоваться</span>
+				<div class="form-group form-icon">
+					<input type="text" class="form-control darkStyle" placeholder="Введите вашу почту">
+					<i class="glyphicon glyphicon-user input-icon" aria-hidden="true"></i>
+				</div>
+				<div class="form-group form-icon">
+					<input type="password" class="form-control darkStyle" placeholder="Придумайте пароль">
+					<i class="glyphicon glyphicon-asterisk input-icon" aria-hidden="true"></i>
+				</div>
+				<span class="btn btn-submit" onclick="window.location.href='checkout.html'">Зарегистрироваться</span>
+			</div>
+		</div>
+	</div>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="login" href="#">Авторизоваться / Зарегистрироваться</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="main">
+		
+			<div class="mockup-panel-top-bg previews-container">
+				<div class="container">
+					<!-- <p id="tip" class="col-md-10 text-center">Чтобы добавить фото, просто нажмите эту кнопку ->>></p> -->
+
+					<div class="col-md-10 text-center" id="previews">
+						<p id="tip">Чтобы добавить фото, просто нажмите эту кнопку ->>></p>
+						<div id="template" class="dz-preview">
+							<div class="dz-mimage"><img name="experiment" data-dz-thumbnail /></div>
+							<div class="dz-progress">
+								<span class="dz-upload" style="width:0%;" data-dz-uploadprogress></span>
+							</div>				
+							<div class="dz-success-mark">    <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">      <title>Check</title>      <defs></defs>      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">        <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>      </g>    </svg>  </div>									
+						</div>
+					</div>
+
+					<div class="col-md-2 btn btn-default upload"><span>Загрузить фото</span></div>
+
+				</div>
+			</div>
+			<div class="mockup-panel-main">
+				<div class="container text-center">
+					<div class="mockup-panel-photogrid">
+						<canvas class="item" id="test"></canvas>
+						<canvas class="item"></canvas>
+						<canvas class="item"></canvas>
+						<canvas class="item"></canvas>
+						<canvas class="item"></canvas>
+					</div>
+					<div class="button-group">
+						<div class="btn btn-submit">Сохранить, потом продолжить</div>
+						<div class="btn btn-submit">Сохранить и заказать</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="mockup-panel-bottom-bg">
+
+			</div>
+		</section>
+
+		 <script>
+        // Get the template HTML and remove it from the doument
+/*        var previewNode = document.querySelector("#template");
+        previewNode.id = "";
+        var previewTemplate = previewNode.parentNode.innerHTML;
+        previewNode.parentNode.removeChild(previewNode);*/
+
+        var previewNode = document.querySelector("#template");
+        previewNode.id = "";
+        var previewTemplate = previewNode.outerHTML;
+        previewNode.remove();
+        
+ 
+        var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+            url: "upload.php", // Set the url
+            thumbnailMethod: "contain",
+            thumbnailWidth: 250,
+            thumbnailHeight: 120,
+            parallelUploads: 20,
+            previewTemplate: previewTemplate,
+            autoQueue: true, // Make sure the files aren't queued until manually added
+            previewsContainer: "#previews", // Define the container to display the previews
+            clickable: ".upload" // Define the element that should be used as click trigger to select files.
+    
+	        });
+
+        myDropzone.on("complete", function complete(file) {
+	          if (file._removeLink) {
+	            file._removeLink.textContent = this.options.dictRemoveFile;
+	          }
+	          if (file.previewElement) {
+	            return file.previewElement.classList.add("dz-complete");
+	          }
+
+	        });
+        myDropzone.on("addedfile", function (file) {
+        	if (document.getElementById("tip") != null) 
+        	{
+        		document.getElementById("tip").remove();
+        	}
+        	$(".dz-preview img").draggable({
+        		helper: "clone",
+        		revert: "invalid",
+		        drag: function (event, ui) {
+		            ui.helper.addClass("draggable");
+		        },
+		        stop: function (event, ui) {
+		            ui.helper.removeClass("draggable");
+
+		        }
+        	})
+        });
+        $(".mockup-panel-photogrid .item").droppable({
+        	drop: function(event, ui) {
+        		console.log(ui.draggable[0].clientWidth); //ширина
+        		// console.log(ui.draggable[0].alt); //название файла
+
+        		$(this).drawImage({
+        			layer: true,
+        			source: 'uploads/' + ui.draggable[0].alt,
+        			x: 0, y: 0,
+        			fromCenter: false,
+        			dblclick: function(layer) {
+        				_enableDrag(layer)
+        			}
+
+        		});
+       
+        		// $(this).html('<img src="uploads/'+ img +'">');
+
+        	}
+        });
+
+
+    	</script>
+
+	</body>
+</html>
